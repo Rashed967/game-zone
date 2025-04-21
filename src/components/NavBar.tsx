@@ -4,7 +4,7 @@ import ColorModeSwicth from "./ColorModeSwicth";
 
 const NavBar = () => {
   return (
-    <HStack justifyContent="space-between" padding="10px">
+    <HStack>
       <Image src={logo} boxSize="60px" />
       <ColorModeSwicth />
     </HStack>
