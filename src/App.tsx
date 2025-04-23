@@ -29,6 +29,7 @@ function App() {
         base: "1rf",
         lg: "200px 1fr",
       }}
+      my={4}
     >
       <GridItem area="nav">
         <NavBar

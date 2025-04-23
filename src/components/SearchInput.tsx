@@ -1,4 +1,4 @@
-import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import { Box, Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { FormEvent, useRef } from "react";
 import { BsSearch } from "react-icons/bs";
 
@@ -16,17 +16,19 @@ const SearchInput = ({ onSearch }: Props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <InputGroup>
-        <InputLeftElement children={<BsSearch />} />
-        <Input
-          borderRadius={20}
-          placeholder="Search games..."
-          variant={"filled"}
-          ref={inputRef}
-        />
-      </InputGroup>
-    </form>
+    <Box width={"100%"}>
+      <form onSubmit={handleSubmit}>
+        <InputGroup>
+          <InputLeftElement children={<BsSearch />} />
+          <Input
+            borderRadius={20}
+            placeholder="Search games..."
+            variant={"filled"}
+            ref={inputRef}
+          />
+        </InputGroup>
+      </form>
+    </Box>
   );
 };
 
