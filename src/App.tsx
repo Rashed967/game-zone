@@ -18,6 +18,7 @@ export interface GameQuery {
 
 function App() {
   const [gameQeury, setGameQuery] = useState<GameQuery>({} as GameQuery);
+  console.log(gameQeury.platform);
   console.log(gameQeury.searchText);
   return (
     <Grid
