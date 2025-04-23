@@ -3,11 +3,15 @@ import logo from "../assets/chakra-ui.png";
 import ColorModeSwicth from "./ColorModeSwicth";
 import SearchInput from "./SearchInput";
 
-const NavBar = () => {
+interface Props {
+  onSearch: (searchText: string) => void;
+}
+
+const NavBar = ({ onSearch }: Props) => {
   return (
     <HStack>
       <Image src={logo} boxSize="60px" />
-      <SearchInput />
+      <SearchInput onSearch={onSearch} />
       <ColorModeSwicth />
     </HStack>
   );
